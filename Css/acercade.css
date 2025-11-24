@@ -1,0 +1,150 @@
+/* ============================
+   Amigo Digital — acercade.css
+   ============================ */
+
+/* ====== Fondo general ====== */
+body {
+  background: linear-gradient(135deg, #F5F5DC, #F7B32B);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  background: linear-gradient(90deg, #F7B32B, #FF6B35); /* fondo cálido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #F7B32B;   /* amarillo dorado */
+  color: white !important;
+  transform: translateY(-2px);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== Titulares ====== */
+h1, h2 {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+h1 { font-size: clamp(1.8rem, 2.4vw, 2.4rem); }
+h2 { font-size: clamp(1.6rem, 2vw, 2rem); }
+
+/* ====== Tarjeta del autor ====== */
+.tarjeta-zoom {
+  background: linear-gradient(135deg, #FFB347, #D97A00);
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.tarjeta-zoom:hover {
+  transform: scale(1.06);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.3);
+}
+
+/* Imagen del autor adaptada */
+.tarjeta-zoom .card-img-top {
+  display: block;              /* asegura que se comporte como bloque */
+  width: 100%;                 /* ocupa todo el ancho del contenedor */
+  height: 350px;               /* altura fija para consistencia visual */
+  object-fit: cover;           /* recorta sin deformar */
+  object-position: center;     /* centra el contenido (rostro, figura) */
+  border-bottom: 4px solid rgba(255,255,255,0.3);
+  border-radius: 0;            /* evita bordes raros en imágenes */
+}
+
+
+/* Contenido de la tarjeta */
+.tarjeta-zoom .card-body {
+  padding: 22px;
+  text-align: center;
+}
+.tarjeta-zoom .card-title {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.tarjeta-zoom .card-text {
+  color: #F5F5F5;
+  font-size: 1.05rem;
+}
+
+/* ====== Botón Más Info ====== */
+.btn-mas-info {
+  background: linear-gradient(90deg, #FF8C42, #FF6B6B);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn-mas-info:hover {
+  background: linear-gradient(90deg, #D95D39, #C0392B);
+  transform: translateY(-2px);
+}
+.btn-mas-info:active {
+  transform: translateY(0);
+}
+
+/* Panel extra del autor */
+#autor-extra {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 14px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* ====== Sección institucional ====== */
+.section-institucional {
+  background: linear-gradient(135deg, #FFD580, #FFB347);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.08);
+}
+.section-institucional p {
+  font-size: 1.1rem;
+  color: #2c2c2c;
+}
+
+/* ====== Footer ====== */
+footer {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+footer p {
+  letter-spacing: 0.3px;
+}
+
+/* ====== Responsividad ====== */
+@media (max-width: 768px) {
+  .tarjeta-zoom .card-img-top {
+    height: 220px;
+  }
+  .btn-mas-info {
+    width: 100%;
+  }
+}
+
+
+#autor-extra-texto,
+#contexto-institucional {
+  text-align: left;
+  line-height: 1.6;
+}
+

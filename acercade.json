@@ -1,0 +1,10 @@
+{
+  "autor": {
+    "nombre": "Joshua Abarca Lario",
+    "correo": "joabarcala@est.utn.ac.cr",
+    "descripcion": "Estudiante de Ingeniería en Software, apasionado por accesibilidad digital y diseño cálido.",
+   "extra": "Estudiante de Ingeniería en Software, con interés en la accesibilidad digital y el diseño cálido orientado a adultos mayores. Se caracteriza por una marcada vocación hacia la resolución de problemas, transformando desafíos técnicos en soluciones eficientes y humanas."
+
+  },
+  "contexto": "Este proyecto se desarrolla en el marco de la Universidad Técnica Nacional (UTN), con el propósito de acercar la tecnología a los adultos mayores mediante herramientas accesibles y amigables. La iniciativa busca reducir la brecha digital y promover la inclusión social, alineándose con la misión de la UTN de formar profesionales comprometidos con la innovación y el bienestar comunitario."
+}

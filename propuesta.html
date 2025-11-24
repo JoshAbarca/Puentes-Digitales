@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta - Amigo Digital</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="Css/propuesta.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(90deg, #F7B32B, #FF6B35);">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">
+        <img src="Img/logo.png" alt="Amigo Digital" width="50" class="me-2"> Amigo Digital
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white fw-bold active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="acercade.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="propuesta.html">Propuesta</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- INTRODUCCIÓN -->
+  <section class="py-5 text-center ">
+    <div class="container">
+      <h1 class="mb-4">Solución a la Problemática</h1>
+      <p class="lead">Este sitio ayuda a adultos mayores a aprender WhatsApp y Gmail con recursos interactivos.</p>
+    </div>
+  </section>
+
+  <!-- SIMULACIÓN WHATSAPP -->
+  <section class="py-5 ">
+    <div class="container">
+      <h2 class="mb-4">Simulación: ¿Estoy listo para usar WhatsApp?</h2>
+      <form id="whatsappCheckForm" class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label">¿Tienes un teléfono inteligente?</label>
+          <select class="form-select" id="telefono">
+            <option value="">Selecciona</option>
+            <option value="sí">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">¿Tienes conexión a internet?</label>
+          <select class="form-select" id="internet">
+            <option value="">Selecciona</option>
+            <option value="sí">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">¿Tienes número de teléfono activo?</label>
+          <select class="form-select" id="numero">
+            <option value="">Selecciona</option>
+            <option value="sí">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+       <div class="col-12 mt-3">
+  <button type="button" class="btn-whatsapp" onclick="verificarWhatsapp()">Verificar</button>
+</div>
+        <div id="resultadoWhatsapp" class="mt-4 fs-5 fw-bold"></div>
+      </form>
+    </div>
+  </section>
+
+<!-- SIMULACIÓN GMAIL -->
+<section class="py-5 bg simulacion-gmail">
+  <div class="container text-center">
+    <h2 class="mb-4">Simulación: Crear una cuenta de Gmail</h2>
+
+    <!-- Botón interactivo -->
+    <button id="toggleBtn" class="btn btn-warning btn-lg mb-4" onclick="mostrarPasos()">
+      Mostrar pasos
+    </button>
+
+    <!-- Lista de pasos -->
+    <ul id="pasosGmail" class="list-group mx-auto text-start d-none" style="max-width: 500px;">
+      <li class="list-group-item">🌐 Ir a <strong>www.gmail.com</strong></li>
+      <li class="list-group-item">➕ Hacer clic en <strong>“Crear cuenta”</strong></li>
+      <li class="list-group-item">👤 Ingresar <strong>nombre y apellido</strong></li>
+      <li class="list-group-item">🆔 Elegir <strong>nombre de usuario</strong></li>
+      <li class="list-group-item">🔒 Crear una <strong>contraseña segura</strong></li>
+      <li class="list-group-item">📞 Confirmar <strong>número de teléfono</strong></li>
+      <li class="list-group-item">✅ Aceptar <strong>términos y condiciones</strong></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- MULTIMEDIA -->
+<section class="py-5 recursos-multimedia">
+  <div class="container">
+    <h2 class="mb-4">Recursos Multimedia</h2>
+    <div class="row">
+      <!-- Infografía -->
+      <div class="col-md-6">
+        <img src="Img/Gmail" alt="Infografía WhatsApp" class="img-fluid rounded shadow">
+      </div>
+      <!-- Video YouTube -->
+      <div class="col-md-6">
+        <div class="ratio ratio-16x9 rounded shadow">
+          <iframe 
+            src="https://www.youtube.com/embed/h4Yt4Bnv5s0" 
+            title="Tutorial Gmail para adultos mayores" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Importar Chart.js desde CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-4 text-center">
+    <p>&copy; 2025 Amigo Digital. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script personalizado -->
+  <script src="Js/propuesta.js"></script>
+</body>
+</html>

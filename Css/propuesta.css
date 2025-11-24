@@ -1,0 +1,116 @@
+/* ====== Navbar ====== */
+.navbar {
+  background: linear-gradient(90deg, #F7B32B, #FF6B35); /* fondo cálido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #F7B32B;   /* amarillo dorado */
+  color: white !important;
+  transform: translateY(-2px);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+body {
+  background: linear-gradient(135deg, #F5F5DC, #F7B32B);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #333;
+  font-weight: bold;
+}
+
+#toggleBtn {
+  background: linear-gradient(45deg, #F7B32B, #FF6B35); /* degradado cálido */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#toggleBtn:hover {
+  transform: scale(1.05); /* zoom al pasar el mouse */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+
+section {
+  background: none; /* deja ver el degradado */
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  padding: 60px 20px;
+}
+
+section:nth-child(even) {
+  background-color: rgba(247, 179, 43, 0.1); /* alterna con un tono cálido */
+}
+/* Aplica a imágenes y videos dentro de Recursos Multimedia */
+.recursos-multimedia img,
+.recursos-multimedia iframe {
+  transition: transform 0.4s ease-in-out; /* animación suave */
+  border-radius: 10px; /* bordes redondeados para estética */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra elegante */
+}
+
+.recursos-multimedia img:hover,
+.recursos-multimedia iframe:hover {
+  transform: scale(1.08); /* zoom al pasar el mouse */
+}
+.simulacion-gmail .list-group-item {
+  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-left: 5px solid #F7B32B;
+}
+
+.simulacion-gmail .list-group-item:hover {
+  background-color: #fff8e1;
+}
+#resultadoWhatsapp {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#resultadoWhatsapp.success {
+  background: linear-gradient(45deg, #4CAF50, #81C784);
+  color: white;
+}
+
+#resultadoWhatsapp.error {
+  background: linear-gradient(45deg, #f44336, #e57373);
+  color: white;
+}
+.btn-whatsapp {
+  background: linear-gradient(45deg, #25D366, #128C7E); /* degradado verde estilo WhatsApp */
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.07); /* zoom suave */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
