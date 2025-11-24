@@ -1,5 +1,5 @@
 // Cargar contenido desde JSON
-fetch('Json/data.json')
+fetch('data.json')
   .then(response => response.json())
   .then(data => {
     document.getElementById('titulo-intro').textContent = data.intro.titulo;
