@@ -13,6 +13,7 @@ function togglePasos() {
     boton.style.background = "linear-gradient(45deg, #F7B32B, #FF6B35)";
   }
 }
+
 function mostrarModalPaso(numero) {
   const textos = {
     1: "🌐 Ir a www.gmail.com",
