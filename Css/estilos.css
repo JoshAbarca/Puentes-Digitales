@@ -134,25 +134,17 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Carrusel pequeño */
+/* Carrusel más grande */
 #carouselIntro {
-  max-width: 300px;
+  max-width: 500px;   /* ancho mayor */
   margin: 0 auto;
 }
 
 #carouselIntro .carousel-item img {
-  max-height: 200px;
+  max-height: 300px;  /* altura mayor */
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-#carouselIntro .carousel-indicators [data-bs-target] {
-  background-color: #E91E63;
-}
-
-#carouselIntro .carousel-indicators .active {
-  background-color: #FF6B35;
 }
 
 
