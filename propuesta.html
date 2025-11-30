@@ -77,28 +77,47 @@
     </div>
   </section>
 
-<!-- SIMULACIÓN GMAIL -->
-<section class="py-5 bg simulacion-gmail">
+<!-- SIMULACIÓN GMAIL CON BOTÓN Y MODALES -->
+<section class="py-5 simulacion-gmail">
   <div class="container text-center">
     <h2 class="mb-4">Simulación: Crear una cuenta de Gmail</h2>
 
     <!-- Botón interactivo -->
-    <button id="toggleBtn" class="btn btn-warning btn-lg mb-4" onclick="mostrarPasos()">
+    <button id="toggleBtn" class="btn btn-warning btn-lg mb-4" onclick="togglePasos()">
       Mostrar pasos
     </button>
 
-    <!-- Lista de pasos -->
-    <ul id="pasosGmail" class="list-group mx-auto text-start d-none" style="max-width: 500px;">
-      <li class="list-group-item">🌐 Ir a <strong>www.gmail.com</strong></li>
-      <li class="list-group-item">➕ Hacer clic en <strong>“Crear cuenta”</strong></li>
-      <li class="list-group-item">👤 Ingresar <strong>nombre y apellido</strong></li>
-      <li class="list-group-item">🆔 Elegir <strong>nombre de usuario</strong></li>
-      <li class="list-group-item">🔒 Crear una <strong>contraseña segura</strong></li>
-      <li class="list-group-item">📞 Confirmar <strong>número de teléfono</strong></li>
-      <li class="list-group-item">✅ Aceptar <strong>términos y condiciones</strong></li>
+    <!-- Lista de pasos (inicia oculta) -->
+    <ul id="pasosGmail" class="list-group mx-auto text-start d-none" style="max-width: 600px;">
+      <li class="list-group-item paso-gmail" onclick="mostrarModalPaso(1)">🌐 Ir a www.gmail.com</li>
+      <li class="list-group-item paso-gmail" onclick="mostrarModalPaso(2)">➕ Hacer clic en 'Crear cuenta'</li>
+      <li class="list-group-item paso-gmail" onclick="mostrarModalPaso(3)">👤 Ingresar nombre y apellido</li>
+      <li class="list-group-item paso-gmail" onclick="mostrarModalPaso(4)">🆔 Elegir nombre de usuario</li>
+      <li class="list-group-item paso-gmail" onclick="mostrarModalPaso(5)">🔒 Crear una contraseña segura</li>
+      <li class="list-group-item paso-gmail" onclick="mostrarModalPaso(6)">📞 Confirmar número de teléfono</li>
+      <li class="list-group-item paso-gmail" onclick="mostrarModalPaso(7)">✅ Aceptar términos y condiciones</li>
     </ul>
   </div>
 </section>
+
+<!-- MODAL DINÁMICO -->
+<div class="modal fade" id="modalPasoGmail" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header gmail-header">
+        <h5 class="modal-title" id="tituloPaso"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body gmail-body text-center" id="contenidoPaso">
+        <!-- Imagen y texto dinámico -->
+      </div>
+      <div class="modal-footer gmail-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- MULTIMEDIA -->
