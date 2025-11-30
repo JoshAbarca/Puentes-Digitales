@@ -13,8 +13,6 @@ function togglePasos() {
     boton.style.background = "linear-gradient(45deg, #F7B32B, #FF6B35)";
   }
 }
-
-// Mostrar modal dinámico con imagen
 function mostrarModalPaso(numero) {
   const textos = {
     1: "🌐 Ir a www.gmail.com",
@@ -31,13 +29,14 @@ function mostrarModalPaso(numero) {
 
   titulo.textContent = textos[numero];
   contenido.innerHTML = `
-    <p class="fw-bold mb-3">${textos[numero]}</p>
-    <img src="Img/Paso ${numero}.png" alt="${textos[numero]}" class="img-fluid rounded shadow">
+    <img src="Img/Paso ${numero}.png" alt="${textos[numero]}" class="img-fluid rounded shadow mt-3">
   `;
 
   const modal = new bootstrap.Modal(document.getElementById("modalPasoGmail"));
   modal.show();
 }
+
+
 function verificarWhatsapp() {
   const telefono = document.getElementById("telefono").value;
   const internet = document.getElementById("internet").value;
