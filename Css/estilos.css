@@ -134,17 +134,27 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== Zoom en imagen de sección ====== */
-.img-zoom {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform: scale(1);
+/* Carrusel pequeño */
+#carouselIntro {
+  max-width: 300px;
+  margin: 0 auto;
 }
 
-.img-zoom:hover {
-  transform: scale(1.2); /* zoom fuerte */
-  box-shadow: 0 12px 24px rgba(0,0,0,0.3); /* sombra profunda */
-  z-index: 10;
+#carouselIntro .carousel-item img {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
+#carouselIntro .carousel-indicators [data-bs-target] {
+  background-color: #E91E63;
+}
+
+#carouselIntro .carousel-indicators .active {
+  background-color: #FF6B35;
+}
+
 
 
 /* Botón más grande y accesible */
