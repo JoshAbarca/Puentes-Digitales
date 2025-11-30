@@ -87,14 +87,49 @@
         </div>
       </div>
 
-      <!-- Imagen a la par -->
-      <div class="col-md-6 text-center">
-        <img src="Img/tecnologia-personas-mayores-3.jpg" 
-     class="img-fluid rounded shadow img-zoom" 
-     alt="Adultos Mayores Aprendiendo" 
-     style="max-height: 400px; object-fit: contain; background-color: #F5F5DC;">
-
+      <!-- Carrusel pequeño a la par -->
+<div class="col-md-6 text-center">
+  <div id="carouselIntro" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 300px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Img/tecnologia-personas-mayores-1.jpg" 
+             class="d-block w-100 rounded" 
+             alt="Adultos mayores aprendiendo tecnología" 
+             style="max-height: 200px; object-fit: cover;">
       </div>
+      <div class="carousel-item">
+        <img src="Img/tecnologia-personas-mayores-2.jpg" 
+             class="d-block w-100 rounded" 
+             alt="Uso de celulares por adultos mayores" 
+             style="max-height: 200px; object-fit: cover;">
+      </div>
+      <div class="carousel-item">
+        <img src="Img/tecnologia-personas-mayores-3.jpg" 
+             class="d-block w-100 rounded" 
+             alt="Videollamadas familiares" 
+             style="max-height: 200px; object-fit: cover;">
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntro" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselIntro" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselIntro" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselIntro" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselIntro" data-bs-slide-to="2"></button>
+    </div>
+  </div>
+</div>
+
 
     </div>
   </div>
