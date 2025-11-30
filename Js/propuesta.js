@@ -1,38 +1,42 @@
-function mostrarPasos() {
+// Mostrar/Ocultar lista de pasos
+function togglePasos() {
   const lista = document.getElementById("pasosGmail");
   const boton = document.getElementById("toggleBtn");
 
   if (lista.classList.contains("d-none")) {
-    // Mostrar pasos
-    const pasos = [
-      "🌐 Ir a www.gmail.com",
-      "➕ Hacer clic en 'Crear cuenta'",
-      "👤 Ingresar nombre y apellido",
-      "🆔 Elegir nombre de usuario",
-      "🔒 Crear una contraseña segura",
-      "📞 Confirmar número de teléfono",
-      "✅ Aceptar términos y condiciones"
-    ];
-
-    lista.innerHTML = "";
-    pasos.forEach(paso => {
-      const li = document.createElement("li");
-      li.textContent = paso;
-      li.className = "list-group-item";
-      lista.appendChild(li);
-    });
-
     lista.classList.remove("d-none");
     boton.textContent = "Ocultar pasos";
-    boton.classList.remove("btn-warning");
-    boton.classList.add("btn-danger");
+    boton.style.background = "linear-gradient(45deg, #FF6B35, #F7B32B)";
   } else {
-    // Ocultar pasos
     lista.classList.add("d-none");
     boton.textContent = "Mostrar pasos";
-    boton.classList.remove("btn-danger");
-    boton.classList.add("btn-warning");
+    boton.style.background = "linear-gradient(45deg, #F7B32B, #FF6B35)";
   }
+}
+
+// Mostrar modal dinámico con imagen
+function mostrarModalPaso(numero) {
+  const textos = {
+    1: "🌐 Ir a www.gmail.com",
+    2: "➕ Hacer clic en 'Crear cuenta'",
+    3: "👤 Ingresar nombre y apellido",
+    4: "🆔 Elegir nombre de usuario",
+    5: "🔒 Crear una contraseña segura",
+    6: "📞 Confirmar número de teléfono",
+    7: "✅ Aceptar términos y condiciones"
+  };
+
+  const titulo = document.getElementById("tituloPaso");
+  const contenido = document.getElementById("contenidoPaso");
+
+  titulo.textContent = textos[numero];
+  contenido.innerHTML = `
+    <p class="fw-bold mb-3">${textos[numero]}</p>
+    <img src="Img/Paso ${numero}.png" alt="${textos[numero]}" class="img-fluid rounded shadow">
+  `;
+
+  const modal = new bootstrap.Modal(document.getElementById("modalPasoGmail"));
+  modal.show();
 }
 function verificarWhatsapp() {
   const telefono = document.getElementById("telefono").value;
