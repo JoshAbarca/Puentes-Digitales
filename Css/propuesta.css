@@ -114,3 +114,31 @@ section:nth-child(even) {
   transform: scale(1.07); /* zoom suave */
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
+/* Estilo para los ítems de pasos Gmail */
+.paso-gmail {
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-left: 5px solid #F7B32B;
+  transition: background-color 0.3s ease;
+}
+
+.paso-gmail:hover {
+  background-color: #fff8e1;
+}
+
+/* Modal adaptado a paleta cálida */
+.gmail-header {
+  background: linear-gradient(90deg, #F7B32B, #FF6B35);
+  color: white;
+}
+
+.gmail-body {
+  background-color: #FFF8E1;
+  color: #333;
+}
+
+.gmail-footer {
+  background-color: rgba(247, 179, 43, 0.1);
+}
+
